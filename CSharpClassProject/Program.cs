@@ -14,7 +14,8 @@ Console.WriteLine("Enter Second Number");
 
 mySecondNumber = double.Parse(Console.ReadLine());
 
-myTotal = myNumber + mySecondNumber;
+myTotal = Math.Round(myNumber + mySecondNumber, 2);
+
 
 Console.WriteLine($"The total is: {myTotal}");
 Console.ReadKey();
