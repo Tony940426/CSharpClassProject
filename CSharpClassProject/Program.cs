@@ -20,7 +20,36 @@
 //Console.WriteLine($"The total is: {myTotal}");
 //Console.ReadKey();
 
-//Relational Operators  >= == != > <
-var String = "Hello \n World";
-Console.WriteLine(String);
-Console.ReadKey();
+//Relational Operators  >= == != >
+/*
+Multiline comment out
+ */
+
+
+int age = 0;
+int winningNumber = 9;
+
+Console.WriteLine("Enter your age");
+
+age = int.Parse(Console.ReadLine());
+
+if (age >= 18)
+{
+    Console.WriteLine("Enter number");
+    int userNumber = int.Parse(Console.ReadLine());
+
+    if (userNumber == winningNumber)
+    {
+        Console.WriteLine("YOU WON!");
+        Console.ReadKey();
+    }
+    else
+    {
+        Console.WriteLine("YOU Lost!");
+        Console.ReadKey();
+    }
+}
+else
+{
+    Console.WriteLine("You are a minor");
+}
