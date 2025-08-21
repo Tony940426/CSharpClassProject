@@ -26,30 +26,81 @@ Multiline comment out
  */
 
 
-int age = 0;
-int winningNumber = 9;
+//int age = 0;
+//int winningNumber = 9;
+
+//Console.WriteLine("Enter your age");
+
+//age = int.Parse(Console.ReadLine());
+
+//if (age >= 18)
+//{
+//    Console.WriteLine("Enter number");
+//    int userNumber = int.Parse(Console.ReadLine());
+
+//    if (userNumber == winningNumber)
+//    {
+//        Console.WriteLine("YOU WON!");
+//        Console.ReadKey();
+//    }
+//    else
+//    {
+//        Console.WriteLine("YOU Lost!");
+//        Console.ReadKey();
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("You are a minor");
+//}
+
+int userAge = 0;
+bool isWithParents = true;
 
 Console.WriteLine("Enter your age");
+userAge = int.Parse(Console.ReadLine());
 
-age = int.Parse(Console.ReadLine());
-
-if (age >= 18)
+if (userAge >= 18)
 {
-    Console.WriteLine("Enter number");
-    int userNumber = int.Parse(Console.ReadLine());
-
-    if (userNumber == winningNumber)
-    {
-        Console.WriteLine("YOU WON!");
-        Console.ReadKey();
-    }
-    else
-    {
-        Console.WriteLine("YOU Lost!");
-        Console.ReadKey();
-    }
+    Console.WriteLine("You can enter since you are over 18..");
+    Console.ReadKey();
+} else if (userAge < 18 && isWithParents)
+{
+    Console.WriteLine("You can enter with your parents");
+    Console.ReadKey();
 }
 else
 {
-    Console.WriteLine("You are a minor");
+    Console.WriteLine("You cannot enter the event.");
+    Console.ReadKey();
 }
+
+
+//int month = 5;
+//string monthName;
+//if (month == 1)
+//    monthName = "Jan";
+//else if (month == 2)
+//    monthName = "Feb";
+//else if (month == 3)
+//    monthName = "Mar";
+//else if (month == 4)
+//    monthName = "Apr";
+//else if (month == 5)
+//    monthName = "May";
+//else if (month == 6)
+//    monthName = "Jun";
+//else if (month == 7)
+//    monthName = "Jul";
+//else if (month == 8)
+//    monthName = "Aug";
+//else if (month == 9)
+//    monthName = "Sep";
+//else if (month == 10)
+//    monthName = "Oct";
+//else if (month == 11)
+//    monthName = "Nov";
+//else if (month == 12)
+//    monthName = "Dec";
+//else
+//    monthName = "Invalid Month";
