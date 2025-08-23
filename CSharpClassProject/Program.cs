@@ -54,26 +54,26 @@ Multiline comment out
 //    Console.WriteLine("You are a minor");
 //}
 
-int userAge = 0;
-bool isWithParents = true;
+//int userAge = 0;
+//bool isWithParents = true;
 
-Console.WriteLine("Enter your age");
-userAge = int.Parse(Console.ReadLine());
+//Console.WriteLine("Enter your age");
+//userAge = int.Parse(Console.ReadLine());
 
-if (userAge >= 18)
-{
-    Console.WriteLine("You can enter since you are over 18..");
-    Console.ReadKey();
-} else if (userAge < 18 && isWithParents)
-{
-    Console.WriteLine("You can enter with your parents");
-    Console.ReadKey();
-}
-else
-{
-    Console.WriteLine("You cannot enter the event.");
-    Console.ReadKey();
-}
+//if (userAge >= 18)
+//{
+//    Console.WriteLine("You can enter since you are over 18..");
+//    Console.ReadKey();
+//} else if (userAge < 18 && isWithParents)
+//{
+//    Console.WriteLine("You can enter with your parents");
+//    Console.ReadKey();
+//}
+//else
+//{
+//    Console.WriteLine("You cannot enter the event.");
+//    Console.ReadKey();
+//}
 
 
 //int month = 5;
@@ -104,3 +104,52 @@ else
 //    monthName = "Dec";
 //else
 //    monthName = "Invalid Month";
+
+int userScore= 0;
+string question1 = "What is the capital of France?";
+string question2 = "What is 2 + 2?";
+string question3 = "What is the largest planet in our solar system?";
+string userAnswer1 = "";
+string userAnswer2 = "";    
+string userAnswer3 = "";
+
+Console.WriteLine(question1);
+userAnswer1 = Console.ReadLine();  
+
+if(userAnswer1.ToUpper().Trim() == "PARIS")
+{
+    userScore++;
+    Console.WriteLine("Correct! Your score is now: " + userScore);
+} else
+{
+    Console.WriteLine("Incorrect! The correct answer is Paris. GAME OVER");
+    Console.ReadKey();
+}
+
+Console.WriteLine(question2);
+userAnswer2 = Console.ReadLine();
+if (userAnswer2.ToUpper().Trim() == "4")
+{
+    userScore++;
+    Console.WriteLine("Correct! Your score is now: " + userScore);
+}
+else
+{
+    Console.WriteLine("Incorrect! The correct answer is 4. GAME OVER");
+    Console.ReadKey();
+}
+
+Console.WriteLine(question3);
+userAnswer3 = Console.ReadLine();
+if (userAnswer3.ToUpper().Trim() == "JUPITER")
+{
+    userScore++;
+    Console.WriteLine("Correct! Your final score is: " + userScore);
+    Console.ReadKey();
+
+}
+else
+{
+    Console.WriteLine($"Incorrect! The correct answer is Jupiter. Final Score {userScore}. GAME OVER");
+    Console.ReadKey();
+}
