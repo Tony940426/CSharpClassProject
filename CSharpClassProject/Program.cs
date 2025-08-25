@@ -105,51 +105,70 @@ Multiline comment out
 //else
 //    monthName = "Invalid Month";
 
-int userScore= 0;
-string question1 = "What is the capital of France?";
-string question2 = "What is 2 + 2?";
-string question3 = "What is the largest planet in our solar system?";
-string userAnswer1 = "";
-string userAnswer2 = "";    
-string userAnswer3 = "";
+//int userScore= 0;
+//string question1 = "What is the capital of France?";
+//string question2 = "What is 2 + 2?";
+//string question3 = "What is the largest planet in our solar system?";
+//string userAnswer1 = "";
+//string userAnswer2 = "";    
+//string userAnswer3 = "";
 
-Console.WriteLine(question1);
-userAnswer1 = Console.ReadLine();  
+//Console.WriteLine(question1);
+//userAnswer1 = Console.ReadLine();  
 
-if(userAnswer1.ToUpper().Trim() == "PARIS")
+//if(userAnswer1.ToUpper().Trim() == "PARIS")
+//{
+//    userScore ++;
+//    Console.WriteLine("Correct! Your score is now: " + userScore);
+//} else
+//{
+//    Console.WriteLine("Incorrect! The correct answer is Paris. GAME OVER");
+//    Console.ReadKey();
+//}
+
+//Console.WriteLine(question2);
+//userAnswer2 = Console.ReadLine();
+//if (userAnswer2.ToUpper().Trim() == "4")
+//{
+//    userScore++;
+//    Console.WriteLine("Correct! Your score is now: " + userScore);
+//}
+//else
+//{
+//    Console.WriteLine("Incorrect! The correct answer is 4. GAME OVER");
+//    Console.ReadKey();
+//}
+
+//Console.WriteLine(question3);
+//userAnswer3 = Console.ReadLine();
+//if (userAnswer3.ToUpper().Trim() == "JUPITER")
+//{
+//    userScore++;
+//    Console.WriteLine("Correct! Your final score is: " + userScore);
+//    Console.ReadKey();
+
+//}
+//else
+//{
+//    Console.WriteLine($"Incorrect! The correct answer is Jupiter. Final Score {userScore}. GAME OVER");
+//    Console.ReadKey();
+//}
+
+//int num1 = 0;
+
+Random random = new Random();
+int randomNumber = random.Next(1, 11); // Generates a number between 1 and 10
+
+Console.WriteLine("Guess the number");
+
+int userGuess = 0;  
+
+if (int.TryParse(Console.ReadLine(), out userGuess))
 {
-    userScore++;
-    Console.WriteLine("Correct! Your score is now: " + userScore);
+    Console.WriteLine($"Valid number entered. The number was {randomNumber}, you guess {userGuess}");
+    Console.ReadKey();
 } else
 {
-    Console.WriteLine("Incorrect! The correct answer is Paris. GAME OVER");
-    Console.ReadKey();
-}
-
-Console.WriteLine(question2);
-userAnswer2 = Console.ReadLine();
-if (userAnswer2.ToUpper().Trim() == "4")
-{
-    userScore++;
-    Console.WriteLine("Correct! Your score is now: " + userScore);
-}
-else
-{
-    Console.WriteLine("Incorrect! The correct answer is 4. GAME OVER");
-    Console.ReadKey();
-}
-
-Console.WriteLine(question3);
-userAnswer3 = Console.ReadLine();
-if (userAnswer3.ToUpper().Trim() == "JUPITER")
-{
-    userScore++;
-    Console.WriteLine("Correct! Your final score is: " + userScore);
-    Console.ReadKey();
-
-}
-else
-{
-    Console.WriteLine($"Incorrect! The correct answer is Jupiter. Final Score {userScore}. GAME OVER");
+    Console.WriteLine($"Invalid number entered The number was {randomNumber}, you guess {userGuess}");
     Console.ReadKey();
 }
