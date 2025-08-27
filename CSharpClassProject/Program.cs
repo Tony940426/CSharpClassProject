@@ -156,19 +156,72 @@ Multiline comment out
 
 //int num1 = 0;
 
-Random random = new Random();
-int randomNumber = random.Next(1, 11); // Generates a number between 1 and 10
+//using System;
 
-Console.WriteLine("Guess the number");
+//Random random = new Random();
+//int randomNumber = random.Next(1, 11); // Generates a number between 1 and 10
 
-int userGuess = 0;  
+//Console.WriteLine("Guess the number");
 
-if (int.TryParse(Console.ReadLine(), out userGuess))
+//int userGuess = 0;  
+
+//if (int.TryParse(Console.ReadLine(), out userGuess))
+//{
+//    Console.WriteLine($"Valid number entered. The number was {randomNumber}, you guess {userGuess}");
+//    Console.ReadKey();
+//} else
+//{
+//    Console.WriteLine($"Invalid number entered The number was {randomNumber}, you guess {userGuess}");
+//    Console.ReadKey();
+//}
+
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+
+double userFirstNumber = 0;
+double userSecondNumber = 0;
+double finalSum = 0;
+string arithmeticOperation = "";
+
+Console.WriteLine("Enter the first number:");
+userFirstNumber = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Enter the second number:");
+userSecondNumber = Convert.ToDouble(Console.ReadLine());
+
+Console.WriteLine("Choose an operation: +, -, *, /");
+arithmeticOperation = Console.ReadLine().Trim();
+
+switch (arithmeticOperation)
 {
-    Console.WriteLine($"Valid number entered. The number was {randomNumber}, you guess {userGuess}");
-    Console.ReadKey();
-} else
-{
-    Console.WriteLine($"Invalid number entered The number was {randomNumber}, you guess {userGuess}");
-    Console.ReadKey();
+    case "+":
+        finalSum = userFirstNumber + userSecondNumber;
+        Console.WriteLine($"Result: {finalSum}");
+        Console.ReadKey();
+        break;
+    case "-":
+        finalSum = userFirstNumber - userSecondNumber;
+        Console.WriteLine($"Result: {finalSum}");
+        Console.ReadKey();
+        break;
+    case "*":
+        finalSum = userFirstNumber * userSecondNumber;
+        Console.WriteLine($"Result: {finalSum}");
+        Console.ReadKey();
+        break;
+    case "/":
+        if (userFirstNumber == 0 || userSecondNumber == 0)
+        {
+            Console.WriteLine("Division by zero is not allowed.");
+            Console.ReadKey();
+            break;
+        }
+        finalSum = userFirstNumber / userSecondNumber;
+        Console.WriteLine($"Result: {finalSum}");
+        Console.ReadKey();
+        break;
+    default:
+        Console.WriteLine("Invalid operation. Please choose +, -, *, or /");
+        Console.ReadKey();
+        break;
 }
