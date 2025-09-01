@@ -175,53 +175,65 @@ Multiline comment out
 //    Console.ReadKey();
 //}
 
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
+//using System.Diagnostics;
+//using System.Runtime.CompilerServices;
 
-double userFirstNumber = 0;
-double userSecondNumber = 0;
-double finalSum = 0;
-string arithmeticOperation = "";
+//double userFirstNumber = 0;
+//double userSecondNumber = 0;
+//double finalSum = 0;
+//string arithmeticOperation = "";
 
-Console.WriteLine("Enter the first number:");
-userFirstNumber = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter the first number:");
+//userFirstNumber = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Enter the second number:");
-userSecondNumber = Convert.ToDouble(Console.ReadLine());
+//Console.WriteLine("Enter the second number:");
+//userSecondNumber = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Choose an operation: +, -, *, /");
-arithmeticOperation = Console.ReadLine().Trim();
+//Console.WriteLine("Choose an operation: +, -, *, /");
+//arithmeticOperation = Console.ReadLine().Trim();
 
-switch (arithmeticOperation)
+//switch (arithmeticOperation)
+//{
+//    case "+":
+//        finalSum = userFirstNumber + userSecondNumber;
+//        Console.WriteLine($"Result: {finalSum}");
+//        break;
+//    case "-":
+//        finalSum = userFirstNumber - userSecondNumber;
+//        Console.WriteLine($"Result: {finalSum}");
+//        break;
+//    case "*":
+//        finalSum = userFirstNumber * userSecondNumber;
+//        Console.WriteLine($"Result: {finalSum}");
+//        break;
+//    case "/":
+//        if (userFirstNumber == 0 || userSecondNumber == 0)
+//        {
+//            Console.WriteLine("Division by zero is not allowed.");
+//            break;
+//        }
+//        finalSum = userFirstNumber / userSecondNumber;
+//        Console.WriteLine($"Result: {finalSum}");
+//        break;
+//    default:
+//        Console.WriteLine("Invalid operation. Please choose +, -, *, or /");
+//        break;
+//}
+
+string myRocket = "|";
+string rocketLanding = "";
+
+for (int i = 10; i >= 0; i--)
 {
-    case "+":
-        finalSum = userFirstNumber + userSecondNumber;
-        Console.WriteLine($"Result: {finalSum}");
-        Console.ReadKey();
-        break;
-    case "-":
-        finalSum = userFirstNumber - userSecondNumber;
-        Console.WriteLine($"Result: {finalSum}");
-        Console.ReadKey();
-        break;
-    case "*":
-        finalSum = userFirstNumber * userSecondNumber;
-        Console.WriteLine($"Result: {finalSum}");
-        Console.ReadKey();
-        break;
-    case "/":
-        if (userFirstNumber == 0 || userSecondNumber == 0)
-        {
-            Console.WriteLine("Division by zero is not allowed.");
-            Console.ReadKey();
-            break;
-        }
-        finalSum = userFirstNumber / userSecondNumber;
-        Console.WriteLine($"Result: {finalSum}");
-        Console.ReadKey();
-        break;
-    default:
-        Console.WriteLine("Invalid operation. Please choose +, -, *, or /");
-        Console.ReadKey();
-        break;
+    Console.Clear();
+    Console.WriteLine($"{rocketLanding}{myRocket}");
+    Thread.Sleep(1000);
+    rocketLanding += "\n";
+
+    if (i == 0)
+    {
+        Console.Clear();
+        Console.WriteLine("Rocket has landed!");
+    }
 }
+Console.ReadKey();
