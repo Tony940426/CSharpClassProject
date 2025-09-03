@@ -218,22 +218,47 @@ Multiline comment out
 //    default:
 //        Console.WriteLine("Invalid operation. Please choose +, -, *, or /");
 //        break;
+
+//string myRocket = "|";
+//string rocketLanding = "";
+
+//for (int i = 10; i >= 0; i--)
+//{
+//    Console.Clear();
+//    Console.WriteLine($"{rocketLanding}{myRocket}");
+//    Thread.Sleep(1000);
+//    rocketLanding += "\n";
 //}
+//Console.WriteLine("The Rocket Has Landed");  
+//Console.ReadKey();
 
-string myRocket = "|";
-string rocketLanding = "";
+//int count = 0;
 
-for (int i = 10; i >= 0; i--)
+//while (count <= 10)
+//{
+//    Console.WriteLine($"Count is: {count}");
+//    count++;
+//};
+
+//Console.ReadKey();
+
+Random random = new Random();
+
+int winningNumber = random.Next(1, 11);
+int userGuessNumber = 0;
+int numberOfAttempts = 0;
+
+while (userGuessNumber != winningNumber)
 {
-    Console.Clear();
-    Console.WriteLine($"{rocketLanding}{myRocket}");
-    Thread.Sleep(1000);
-    rocketLanding += "\n";
+    Console.WriteLine("Guess a number between 1 and 10");
+    userGuessNumber = int.Parse(Console.ReadLine());
+    numberOfAttempts++;
 
-    if (i == 0)
+    if (userGuessNumber != winningNumber)
     {
-        Console.Clear();
-        Console.WriteLine("Rocket has landed!");
+        Console.WriteLine($"You guessed {userGuessNumber}. This is incorrect. This is your {numberOfAttempts} attempt");
     }
 }
+
+Console.WriteLine($"You guessed the number 8. It took you {numberOfAttempts} attempts.");
 Console.ReadKey();
