@@ -242,23 +242,56 @@ Multiline comment out
 
 //Console.ReadKey();
 
-Random random = new Random();
+//Random random = new Random();
 
-int winningNumber = random.Next(1, 11);
-int userGuessNumber = 0;
-int numberOfAttempts = 0;
+//int winningNumber = random.Next(1, 11);
+//int userGuessNumber = 0;
+//int numberOfAttempts = 0;
 
-while (userGuessNumber != winningNumber)
+//while (userGuessNumber != winningNumber)
+//{
+//    Console.WriteLine("Guess a number between 1 and 10");
+//    userGuessNumber = int.Parse(Console.ReadLine());
+//    numberOfAttempts++;
+
+//    if (userGuessNumber != winningNumber)
+//    {
+//        Console.WriteLine($"You guessed {userGuessNumber}. This is incorrect. This is your {numberOfAttempts} attempt");
+//    }
+//}
+
+//Console.WriteLine($"You guessed the number 8. It took you {numberOfAttempts} attempts.");
+//Console.ReadKey();
+
+
+
+//Console.WriteLine("Welcome to the Adventure Game!");
+//Console.WriteLine("Enter your character's name: ");
+//string playersName = Console.ReadLine();
+
+//Console.ReadKey();
+
+int userNumber = 0;
+int numberCount = 0;
+bool continueLoop = true;
+
+do
 {
-    Console.WriteLine("Guess a number between 1 and 10");
-    userGuessNumber = int.Parse(Console.ReadLine());
-    numberOfAttempts++;
+    Console.WriteLine("Please enter number");
+    int inputNumber = int.Parse(Console.ReadLine());
+    userNumber += inputNumber;
+    numberCount++;
+    Console.WriteLine($"Continue to add more numbers yes/no?");
+    string userResponse = Console.ReadLine().ToLower().Trim();  
 
-    if (userGuessNumber != winningNumber)
+    if (userResponse == "no" || userResponse == "n")
     {
-        Console.WriteLine($"You guessed {userGuessNumber}. This is incorrect. This is your {numberOfAttempts} attempt");
-    }
-}
+        continueLoop = false;
 
-Console.WriteLine($"You guessed the number 8. It took you {numberOfAttempts} attempts.");
+    }
+
+}
+while (continueLoop);
+
+Console.WriteLine($"The average is {userNumber / numberCount}");
 Console.ReadKey();
