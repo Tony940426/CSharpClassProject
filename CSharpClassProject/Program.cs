@@ -271,27 +271,82 @@ Multiline comment out
 
 //Console.ReadKey();
 
-int userNumber = 0;
-int numberCount = 0;
-bool continueLoop = true;
+//int userNumber = 0;
+//int numberCount = 0;
+//bool continueLoop = true;
 
-do
+//do
+//{
+//    Console.WriteLine("Please enter number");
+//    int inputNumber = int.Parse(Console.ReadLine());
+//    userNumber += inputNumber;
+//    numberCount++;
+//    Console.WriteLine($"Continue to add more numbers yes/no?");
+//    string userResponse = Console.ReadLine().ToLower().Trim();  
+
+//    if (userResponse == "no" || userResponse == "n")
+//    {
+//        continueLoop = false;
+
+//    }
+
+//}
+//while (continueLoop);
+
+//Console.WriteLine($"The average is {userNumber / numberCount}");
+//Console.ReadKey();
+
+//string[] weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+
+
+//int[,] matrix = new int[3, 3]
+//{
+//    {1, 2, 3},
+//    {4, 5, 6},
+//    {7, 8, 9}
+//};
+
+//Console.WriteLine(matrix[1, 1]);
+
+//int[,,] array = new int[2, 2, 2]
+//{
+//    {
+//        {1, 2},
+//        {3, 4}
+//    },
+//    {
+//        {5, 6},
+//        {7, 8}
+//    }
+//};
+
+
+//int[,] arrayField = new int[3, 3]
+//{
+//    { 1, 2, 3},
+//    {4, 5, 6},
+//    {7, 8, 9}
+//};
+//int column = arrayField.GetLength(0);
+//int row = arrayField.GetLength(1);
+
+//for (int i = 0; i < column; i++)
+//{
+//    int sumArry = 0;
+//    for (int j = 0; j < row; j++)
+//    {
+//        sumArry += arrayField[i, j];
+//    }
+//    Console.WriteLine(sumArry);
+//}
+
+//Console.ReadKey();
+
+using System;
+
+int[] numberArray = [1, 2, 3, 4, 5, 6];
+foreach(int number in numberArray)
 {
-    Console.WriteLine("Please enter number");
-    int inputNumber = int.Parse(Console.ReadLine());
-    userNumber += inputNumber;
-    numberCount++;
-    Console.WriteLine($"Continue to add more numbers yes/no?");
-    string userResponse = Console.ReadLine().ToLower().Trim();  
-
-    if (userResponse == "no" || userResponse == "n")
-    {
-        continueLoop = false;
-
-    }
-
+    Console.WriteLine(number);
 }
-while (continueLoop);
-
-Console.WriteLine($"The average is {userNumber / numberCount}");
 Console.ReadKey();
