@@ -342,11 +342,11 @@ Multiline comment out
 
 //Console.ReadKey();
 
-using System;
+//using System;
 
-int[] numberArray = [1, 2, 3, 4, 5, 6];
-foreach(int number in numberArray)
-{
-    Console.WriteLine(number);
-}
-Console.ReadKey();
+//int[] numberArray = [1, 2, 3, 4, 5, 6];
+//foreach(int number in numberArray)
+//{
+//    Console.WriteLine(number);
+//}
+//Console.ReadKey();
