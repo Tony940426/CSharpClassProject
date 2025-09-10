@@ -350,3 +350,4 @@ Multiline comment out
 //    Console.WriteLine(number);
 //}
 //Console.ReadKey();
+//Static
