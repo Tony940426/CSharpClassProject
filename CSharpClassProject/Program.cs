@@ -351,3 +351,37 @@ Multiline comment out
 //}
 //Console.ReadKey();
 //Static
+
+using System.Diagnostics.CodeAnalysis;
+
+Console.WriteLine("Insert the number of days to simulate");
+int numberOfDays = int.Parse(Console.ReadLine());
+Random random = new Random();
+
+int[] temperature = new int[numberOfDays];
+string[] daysOfWeek = { "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" };
+string[] weatherCondition = { "Sunny", "Raining", "Cloudy", "Thunderstorm", "Snowy"};
+string[] WeatherConditions = new string[numberOfDays];
+double averageTemp = 0;
+
+for (int i = 0; i < numberOfDays; i++)
+{
+    temperature[i] = random.Next(-10, 40);
+    WeatherConditions[i] = weatherCondition[random.Next(0, weatherCondition.Length)];
+    Console.WriteLine($"Day {daysOfWeek[i]}: {temperature[i]}°C, {WeatherConditions[i]}");
+}
+
+averageTemp = calculateAverage(temperature);
+Console.WriteLine($"The average temperature over {numberOfDays} days is: {averageTemp}°C");
+Console.ReadKey();
+
+static double calculateAverage(int[] temperature)
+{
+    double sum = 0;
+    foreach (int temp in temperature)
+    {
+        sum += temp;
+    }
+    
+    return  sum / temperature.Length;
+}
