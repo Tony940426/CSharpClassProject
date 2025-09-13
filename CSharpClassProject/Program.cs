@@ -373,6 +373,7 @@ for (int i = 0; i < numberOfDays; i++)
 
 averageTemp = calculateAverage(temperature);
 Console.WriteLine($"The average temperature over {numberOfDays} days is: {averageTemp}°C");
+Console.WriteLine($"The max tempreture is {temperature.Max()}°C and the minimum tempreture is {temperature.Min()}");
 Console.ReadKey();
 
 static double calculateAverage(int[] temperature)
@@ -384,4 +385,30 @@ static double calculateAverage(int[] temperature)
     }
     
     return  sum / temperature.Length;
+}
+
+static int findMaxTemperature(int[] temperature)
+{
+    int maxTemp = temperature[0];
+    foreach (int temp in temperature)
+    {
+        if (temp > maxTemp)
+        {
+            maxTemp = temp;
+        }
+    }
+    return maxTemp;
+}
+
+static int findMinTemperature(int[] temperature)
+{
+    int minTemp = temperature[0];
+    foreach (int temp in temperature)
+    {
+        if (temp < minTemp)
+        {
+            minTemp = temp;
+        }
+    }
+    return minTemp;
 }
