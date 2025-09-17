@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using CSharpClassProject;
+// See https://aka.ms/new-console-template for more information
 //double myNumber = 0;
 //double mySecondNumber = 0;
 //double myTotal = 0;
@@ -413,27 +414,31 @@ Multiline comment out
 //    return minTemp;
 //}
 
-using System.Diagnostics.CodeAnalysis;
+//static void PrintAverage(double[] temperatures)
+//{
+//    // TODO
+//    double sum = CalculateAverage(temperatures);
+//    Console.WriteLine($"The average temperature is: {sum}");
 
-static void PrintAverage(double[] temperatures)
-{
-    // TODO
-    double sum = CalculateAverage(temperatures);
-    Console.WriteLine($"The average temperature is: {sum}");
+//}
 
-}
+//Console.ReadKey();
 
+//static double CalculateAverage(double[] temperatures)
+//{
+//    // TODO
+//    double sum = 0;
+
+//    for (int i = 0; i < temperatures.Length; i++)
+//    {
+//        sum += temperatures[i];
+//    }
+
+//    return sum / temperatures.Length;
+//}
+
+
+Car car = new Car("Audi A3");
+Car anotherCar = new Car("BMW X5");
+Console.WriteLine(car);
 Console.ReadKey();
-
-static double CalculateAverage(double[] temperatures)
-{
-    // TODO
-    double sum = 0;
-
-    for (int i = 0; i < temperatures.Length; i++)
-    {
-        sum += temperatures[i];
-    }
-
-    return sum / temperatures.Length;
-}
