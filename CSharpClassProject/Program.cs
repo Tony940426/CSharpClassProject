@@ -437,6 +437,8 @@ Multiline comment out
 //    return sum / temperatures.Length;
 //}
 
+//When a function is inside a class it is called a method
+
 
 Car car = new Car("Audi A3");
 Car anotherCar = new Car("BMW X5");

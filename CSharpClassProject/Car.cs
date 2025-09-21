@@ -9,9 +9,10 @@ namespace CSharpClassProject
 {
     internal class Car
     {
-        public string Model { get; set; }
         //member variable
         private string _model = "";
+        public string Model { get => _model; set => _model = value; } 
+        public string Color { get; set; } = "Black";    
 
 
         public Car(string model)
