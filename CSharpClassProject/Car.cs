@@ -15,7 +15,7 @@ namespace CSharpClassProject
         public string Color { get; set; } = "Black";    
 
 
-        public Car(string model)
+        public Car(string model, string series = "5 Series", string year = "2024")
         {
             _model = model;
             Console.WriteLine($"Hello {model}");
