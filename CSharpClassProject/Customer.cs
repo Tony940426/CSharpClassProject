@@ -16,5 +16,10 @@ namespace CSharpClassProject
         {
             
         }
+
+        public Customer()
+        {
+             getFie
+        }
     }
 }
