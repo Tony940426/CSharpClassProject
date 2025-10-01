@@ -439,7 +439,7 @@ Multiline comment out
 //When a function is inside a class it is called a method
 
 
-Car car = new Car("Audi A3");
-Car anotherCar = new Car("BMW X5");
-Console.WriteLine(car);
-Console.ReadKey();
+//Car car = new Car("Audi A3");
+//Car anotherCar = new Car("BMW X5");
+//Console.WriteLine(car);
+//Console.ReadKey();

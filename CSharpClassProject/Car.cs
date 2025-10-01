@@ -25,5 +25,7 @@ namespace CSharpClassProject
         {
             
         }
+        
+        //Write only property. Example use - Passwords.
     }
 }
