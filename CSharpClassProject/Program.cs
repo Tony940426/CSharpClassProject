@@ -446,3 +446,19 @@ Multiline comment out
 
 
 Console.WriteLine("Welcome to the Quiz Game!");
+Question[] questions = new Question[]
+{
+    new Question("What is the capital of France?", 
+    new string[] { "Berlin", "Madrid", "Paris", "Rome" }, 
+    2),
+    new Question("What is 2 + 2?", 
+    new string[] { "3", "4", "5", "6" },
+    1),
+    new Question("What is the largest planet in our solar system?", 
+    new string[] { "Earth", "Mars", "Jupiter", "Saturn" },
+    2)
+};
+
+Quiz myQuiz = new Quiz(questions);
+myQuiz.DisplayQuestion(questions[0]);
+Console.ReadLine();

@@ -21,8 +21,12 @@ namespace CSharpClassProject
             Console.WriteLine(question.QuestionText);
             for (int i = 0; i < question.Answers.Length; i++)
             {
-                Console.WriteLine($"{i + 1}. {question.Answers[i]}");
-            }
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.Write(" ");
+                Console.Write(i + 1);
+                Console.ResetColor();
+                Console.WriteLine($". {question.Answers[i]}");
+                }
         }
     }
 }
