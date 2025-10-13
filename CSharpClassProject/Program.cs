@@ -460,5 +460,5 @@ Question[] questions = new Question[]
 };
 
 Quiz myQuiz = new Quiz(questions);
-myQuiz.DisplayQuestion(questions[0]);
+myQuiz.StartQuiz();
 Console.ReadLine();

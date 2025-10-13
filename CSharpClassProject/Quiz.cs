@@ -10,11 +10,13 @@ namespace CSharpClassProject
     internal class Quiz
     {
         private Question[] questions;
+        private int _score;
 
 
         public Quiz(Question[] questions)
         {
             this.questions = questions;
+            _score = 0;
         }  
 
         public void StartQuiz()
@@ -25,20 +27,38 @@ namespace CSharpClassProject
             {
                 Console.WriteLine($"\nQuestion {questionNumber++}:");
                 DisplayQuestion(question);
-
                 int userChoice = GetUserChoice();
                 if (question.IsCorrecctAnswer(userChoice))
                 {
                     Console.WriteLine("Correct!");
+                    _score++;
                 }
                 else
                 {
                     Console.WriteLine($"Incorrect! The correct answer was: {question.Answers[question.CorrectAnswerIndex]}");
                 }
             }
+            DisplayResult();
+        }
+
+        private void DisplayResult()
+        {
+            Console.WriteLine($"\nQuiz Over! Your score: {_score}/{questions.Length}");
+
+            double percentage = ((double)_score / questions.Length) * 100;
+            if (percentage >= 0.8)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;    
+                Console.WriteLine("Excellent work!");
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("You did bad!");
+            }
         }
         
-        public void DisplayQuestion(Question question)
+        private void DisplayQuestion(Question question)
         {
             Console.WriteLine(question.QuestionText);
             for (int i = 0; i < question.Answers.Length; i++)
@@ -48,15 +68,6 @@ namespace CSharpClassProject
                 Console.Write(i + 1);
                 Console.ResetColor();
                 Console.WriteLine($". {question.Answers[i]}");
-            }
-
-            if(GetUserChoice() == question.CorrectAnswerIndex)
-            {
-                Console.WriteLine("Correct!");
-            }
-            else
-            {
-                Console.WriteLine("incorrect!");
             }
         }
         
