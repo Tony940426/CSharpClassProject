@@ -445,20 +445,26 @@ Multiline comment out
 //Console.ReadKey();
 
 
-Console.WriteLine("Welcome to the Quiz Game!");
-Question[] questions = new Question[]
-{
-    new Question("What is the capital of France?", 
-    new string[] { "Berlin", "Madrid", "Paris", "Rome" }, 
-    2),
-    new Question("What is 2 + 2?", 
-    new string[] { "3", "4", "5", "6" },
-    1),
-    new Question("What is the largest planet in our solar system?", 
-    new string[] { "Earth", "Mars", "Jupiter", "Saturn" },
-    2)
-};
+//Console.WriteLine("Welcome to the Quiz Game!");
+//Question[] questions = new Question[]
+//{
+//    new Question("What is the capital of France?", 
+//    new string[] { "Berlin", "Madrid", "Paris", "Rome" }, 
+//    2),
+//    new Question("What is 2 + 2?", 
+//    new string[] { "3", "4", "5", "6" },
+//    1),
+//    new Question("What is the largest planet in our solar system?", 
+//    new string[] { "Earth", "Mars", "Jupiter", "Saturn" },
+//    2)
+//};
 
-Quiz myQuiz = new Quiz(questions);
-myQuiz.StartQuiz();
-Console.ReadLine();
+//Quiz myQuiz = new Quiz(questions);
+//myQuiz.StartQuiz();
+//Console.ReadLine();
+
+Person person = new Person("John", 30);
+person.Greet();
+Console.ReadKey();
+
+List<string> colors = new List<string>();
