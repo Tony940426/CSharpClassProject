@@ -463,8 +463,25 @@ Multiline comment out
 //myQuiz.StartQuiz();
 //Console.ReadLine();
 
-Person person = new Person("John", 30);
-person.Greet();
-Console.ReadKey();
+//Person person = new Person("John", 30);
+//person.Greet();
+//Console.ReadKey();
 
-List<string> colors = new List<string>();
+//List<string> colors = new List<string>();
+
+List<int> numbers = [42, 2, 33, 2, 33];
+
+numbers.Sort();
+var sortedNumbers = numbers.FindAll(n => n >= 10);
+
+foreach (int number in sortedNumbers)
+{
+    Console.WriteLine(number);
+}
+
+
+Predicate<int> isEven = n => n % 2 == 0;    
+numbers.Any(isEven);
+
+
+Console.ReadKey();
