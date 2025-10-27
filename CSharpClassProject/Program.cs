@@ -481,7 +481,7 @@ foreach (int number in sortedNumbers)
 
 
 Predicate<int> isEven = n => n % 2 == 0;    
-numbers.Any(isEven);
 
+List<int>filterdNumbers = numbers.Where(n => n> 5).ToList();
 
 Console.ReadKey();
