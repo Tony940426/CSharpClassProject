@@ -486,3 +486,9 @@ List<int>filterdNumbers = numbers.Where(n => n> 5).ToList();
 //Linq is built into C#
 
 Console.ReadKey();
+
+//Object is the highest level data type in C#
+//foreach (object hello in filterdNumbers)
+//{
+//    Console.WriteLine(hello);
+//}
